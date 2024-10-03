@@ -1,0 +1,56 @@
+@startuml
+class GameObject {
+    getId()
+    getName()
+    getX()
+    getY()
+        id
+    name
+    x
+    y
+    __init__()
+}
+class Unit {
+    isAlive()
+    getHp()
+    receiveDamage()
+        hp
+    __init__()
+}
+class Attacker {
+    attack()
+        __init__()
+}
+class Moveable {
+    move()
+        __init__()
+}
+class Archer {
+    attack()
+    move()
+        attack_power
+    x
+    y
+    __init__()
+}
+class Building {
+    isBuilt()
+        built
+    __init__()
+}
+class Fort {
+    attack()
+        attack_power
+    __init__()
+}
+class MobileHouse {
+    move()
+        x
+    y
+    __init__()
+}
+GameObject <|-- Unit
+ABC <|-- Attacker
+ABC <|-- Moveable
+GameObject <|-- Building
+@enduml

@@ -57,11 +57,11 @@ class Moveable(ABC):
 class Archer(Unit, Attacker, Moveable):
     def __init__(self, id, name, x, y, hp, attack_power):
         super().__init__(id, name, x, y, hp)
-        self._attack_power = attack_power
+        self.attack_power = attack_power
 
     def attack(self, unit):
         if self.isAlive():
-            unit.receiveDamage(self._attack_power)
+            unit.receiveDamage(self.attack_power)
 
     def move(self, x, y):
         self.x = x
