@@ -50,7 +50,14 @@ class MobileHouse {
     __init__()
 }
 GameObject <|-- Unit
+Unit <|-- Archer
+Attacker <|-- Archer
+Moveable <|-- Archer
 ABC <|-- Attacker
 ABC <|-- Moveable
 GameObject <|-- Building
+Building <|-- Fort
+Attacker <|-- Fort
+Building <|-- MobileHouse
+Moveable <|-- MobileHouse
 @enduml
